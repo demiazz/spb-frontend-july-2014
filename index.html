@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Ribbon theme for Shower</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="styles/screen.css">
+</head>
+<body class="list">
+		<header class="caption">
+		<h1>FLUX in the wild</h1>
+		<p><a href="https://github.com/demiazz">Alexey Plutalov</a>, <a href="http://evilmartians.ru">Evil Martians</a></p>
+	</header>
+
+	<section class="slide shout"><div>
+		<h2>FLUX pattern</h2>
+	</div></section>
+
+	<section class="slide cover h" style="background: white;"><div>
+		<img src="images/flux-complex.png" alt="">
+		<footer>
+			<p>FLUX pattern representation.</p>
+		</footer>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Ideas</h2>
+		<ul>
+			<li>Unidirectional dafa flow is central idea in FLUX;</li>
+			<li>No bidirectional data binding, as in other tools (Ember, Angular, ...);</li>
+			<li>Cascading updates;</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>FLUX is a pattern and consists of:</h2>
+		<ul>
+			<li>Dispatcher;</li>
+			<li>Stores;</li>
+			<li>Views;</li>
+			<li>Controller-Views</li>
+			<li>Actions;</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Dispatcher</h2>
+		<ul>
+			<li>Is a applicaction central hub;</li>
+			<li>Converts UI events to data changes through actions.</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Stores</h2>
+		<ul>
+			<li>Contain state and logic;</li>
+			<li>Similar to M from MVC, but presents objects collection;</li>
+			<li>Stores can combine business logic with events dispatching;</li>
+			<li>Stores haven't public methods.</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Views</h2>
+		<ul>
+			<li>Classic representation layer.</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Controller-Views</h2>
+		<ul>
+			<li>Representation layer;</li>
+			<li>Handle UI events, and update self and child views when data changes.</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Action</h2>
+		<ul>
+			<li>Optional boilerplate element for flexible converting of UI events to dispatcher calls.</li>
+		</ul>
+	</div></section>
+
+	<section class="slide shout"><div>
+		<h2>Without React</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Web components are cool :)</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Web components are cool :)</h2>
+		<h2>But clutter of events is painful :(</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Web components are cool :)</h2>
+		<h2>But clutter of events is painful :(</h2>
+		<h2>FLUX is a simple way to organize event flow</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<ul>
+			<li>Replace React components by your component library;</li>
+			<li>Organize your application events in unidirectional flow;</li>
+			<li>...</li>
+			<li><b>Profit</b></li>
+		</ul>
+	</div></section>
+
+	<section class="slide" style="text-align: center;"><div>
+		<h2 style="font-weight: bold; text-align: center;">Questions and holywars</h2>
+		<img src="images/trollface.png" style="height: 60%;"/>
+	</div></section>
+
+	<script src="shower.min.js"></script>
+	<!-- Copyright © 2014 Alexey Plutalov, Evil Martians -->
+</body>
+</html>
