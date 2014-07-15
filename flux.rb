@@ -11,10 +11,10 @@ EOS
 section "FLUX pattern" do
 
   center <<-EOS
-    Views --> (actions) ---> Dispatcher --> (registered callback) --> Stores -------+
-    Ʌ                                                                               |
-    |                                                                               V
-    +- (Controller-Views "change" event handlers) -- (Stores emit "change" events) -+
+    Views --> (actions) --> Dispatcher --> (registered callback) --> Stores -+
+    Ʌ                                                                        |
+    |                                                                        V
+    +- (Controller-Views "change" event handlers) -- (Stores emit "change") -+
   EOS
 
   center <<-EOS
@@ -33,7 +33,8 @@ section "FLUX pattern" do
     FLUX is a pattern and consists of:
       * Dispatcher
       * Stores
-      * ControllerViews
+      * Views
+      * Controller-Views
       * Actions
   EOS
 
@@ -50,12 +51,20 @@ section "FLUX pattern" do
     Contain state and logic.
     Similar to M from MVC, but presents objects collection.
     Stores can combine business logic with events dispatching.
+    Stores haven't public methods.
   EOS
 
   block <<-EOS
-    \e[1mControllerViews\e[0m
+    \e[1mViews\e[0m
 
-    Handle UI events, and update views when data changes.
+    Classic representation layer.
+  EOS
+
+  block <<-EOS
+    \e[1mController-Views\e[0m
+
+    Representation layer.
+    Handle UI events, and update self and child views when data changes.
   EOS
 
   block <<-EOS
